@@ -3,9 +3,27 @@
 <head>
 <title>Page Title</title>
 <link href="WebsiteCSS.css" rel="stylesheet" type="text/css">
+<script>
+var slidechange = document.getElementById("slide");
+var slideBegin = 0;
+var SlideImgs = ["../website-images/fb.jpeg",
+				 "../website-images/twitter.jpeg", ];
+function changeImg() {
+slidechange.setAttribute("src", SlideImgs[slideBegin]);
+	slideBegin++;
+if(slideBegin >= SlideImgs.length) {
+	slideBegin = 0;
+}
+}
+
+
+function loopSlide() {
+setInterval(changeImg, 1000);
+}
+</script>
 </head>
 
-<body>
+<body onload="loopSlide()">
 <header class="HeadContent">
   <h1>Jacob's Website</h1>
   <p>A website designed by me.</p>
@@ -32,11 +50,11 @@
     <a href="#" class="NavButton">Social</a>
     <div class="HoverContent">
       <a href="#">Facebook 
-		<img src="fb.jpeg" height="17" width="17" align="right" </img> </a>
+		<img src="../website-images/fb.jpeg" height="17" width="17" align="right" </img> </a>
       <a href="#">Twitter
-		<img src="twitter.jpeg" height="17" width="17" align="right" </img> </a>
+		<img src="../website-images/twitter.jpeg" height="17" width="17" align="right" </img> </a>
       <a href="#">Instagram
-		<img src="ig.jpeg" height="17=" width="17" align="right" </img> </a>
+		<img src="../website-images/ig.jpeg" height="17=" width="17" align="right" </img> </a>
     </div>
   </li>
 </div>
@@ -45,6 +63,7 @@
 <main>
 
   <article class="BreakSpace">
+	<h1> x </h1>
     <h2>TITLE HEADING</h2>
     <h5>Title description, Dec 7, 2017</h5>
     <div class="fakeimg" style="height:200px;">Image</div>
@@ -60,7 +79,7 @@
   <aside>
     <h2>About Me</h2>
     <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
+    <img id="slide" src="../website-images/ig.jpeg" style="height:200px; width:200px"> </img>
     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
     <h3>More Text</h3>
     <p>Lorem ipsum dolor sit ame.</p>
@@ -73,6 +92,6 @@
 <footer>
   <h2>Footer</h2>
 </footer>
-
+<script>
 </body>
 </html>
