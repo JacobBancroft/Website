@@ -6,14 +6,14 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  background-color: #191970
 }
 /* Header/logo Title */
 header {
-  background-image: url("HeaderBG.jpeg");
+  background-image: url("../Website-Images/HeaderBG.jpeg");
   padding-top: 10px;
   padding-bottom: 5px;
   text-align: center;
-  repeat-x: none;
   color: white;
 }
 
@@ -25,7 +25,7 @@ header h1 {
 /* Style the top navigation bar */
 nav {
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
 }
 
 ul {
@@ -33,7 +33,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
 }
 
 li {
@@ -42,15 +42,21 @@ li {
 
 li a, .NavButton {
   display: inline-block;
-  color: white;
+  color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 25px;
+  
   text-decoration: none;
 }
 
 li a:hover, .NavHover:hover .NavButton {
   background-color: red;
 }
+
+.arrows { max-width: 100%;
+		  max-height: 100%;
+}
+
 
 li.NavHover {
   display: inline-block;
@@ -63,13 +69,37 @@ li.NavHover {
   min-width: 160px;
   z-index: 1;
 }
+.ltriangle {
+position: absolute;
+ width:10px;
+ height:10px;
+ z-index: 10;
+ top: 163px;
+ left: 175px;
+}
+.ltriangle1 {
+position: absolute;
+ width:10px;
+ height:10px;
+ z-index: 11;
+ top: 163px;
+ left: 265px;
 
+
+}
 .HoverContentSocial  {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   z-index: 1;
+}
+
+.CurrentPage {
+  display: block;
+  background-color: #191970;
+  border: 1px solid #191970;
+  text-align: left;
 }
 .HoverContentSocial a {
   display: none;
@@ -99,7 +129,7 @@ li.NavHover {
 }
 #NavigationBar { overflow: none; }
 nav { width: auto;
-	 z-index: 1} 
+	height:45px;} 
 
 
 
@@ -114,6 +144,7 @@ nav a:hover {
 main {
   display: flex;
   flex-wrap: wrap;
+   background-color: #2C2928;
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -121,19 +152,19 @@ main {
 
 aside {
   flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
+ background-color: #2C2928;
+ padding: 20px;
 }
 
 /* content column */
 article {   
   flex: 70%;
-  background-color: white;
+ background-color: #2C2928;
   padding: 20px;
 }
 
 /* Fake image, just for this example */
-.fakeimg {
+.fakeimg 
   background-color: #aaa;
   width: 100%;
   padding: 20px;

@@ -3,24 +3,6 @@
 <head>
 <title>Page Title</title>
 <link href="WebsiteCSS.css" rel="stylesheet" type="text/css">
-<script>
-var slidechange = document.getElementById("slide");
-var slideBegin = 0;
-var SlideImgs = ["../website-images/fb.jpeg",
-				 "../website-images/twitter.jpeg", ];
-function changeImg() {
-slidechange.setAttribute("src", SlideImgs[slideBegin]);
-	slideBegin++;
-if(slideBegin >= SlideImgs.length) {
-	slideBegin = 0;
-}
-}
-
-
-function loopSlide() {
-setInterval(changeImg, 1000);
-}
-</script>
 </head>
 
 <body onload="loopSlide()">
@@ -32,7 +14,13 @@ setInterval(changeImg, 1000);
 <div id="NavigationBar">
 <ul>
 <li class="NavHover">
+    <a href="#" class="CurrentPage">Home</a>
+  </li>
+<li class="NavHover">
     <a href="#" class="NavButton">Pricing</a>
+		<div class="ltriangle">
+			<img class="arrows" src="../website-images/down-tr.png">
+		</div>
     <div class="HoverContent">
       <a href="#">GFX</a>
       <a href="#">Banners</a>
@@ -41,6 +29,11 @@ setInterval(changeImg, 1000);
   </li>
 <li class="NavHover">
     <a href="#" class="NavButton">News</a>
+	
+		
+			<div class="ltriangle1">
+			<img class="arrows" src="../website-images/down-tr.png">
+		</div>
     <div class="HoverContent">
       <a href="#">Upcoming events</a>
       <a href="#">Trending</a>
@@ -74,6 +67,7 @@ setInterval(changeImg, 1000);
     <h5>Title description, Sep 2, 2017</h5>
     <div class="fakeimg" style="height:200px;">Image</div>
     <p>Some text..</p>
+
     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
   </article>
   <aside>
@@ -93,5 +87,22 @@ setInterval(changeImg, 1000);
   <h2>Footer</h2>
 </footer>
 <script>
+var slidechange = document.getElementById("slide");
+var i = 0;
+var SlideImgs = ["../website-images/slideshow-image0.jpg",
+				 "../website-images/slideshow-image1.jpg", ];
+function changeImg() {
+slidechange.setAttribute("src", SlideImgs[i]);
+	i++;
+if(i >= SlideImgs.length) {
+	i = 0;
+}
+}
+
+
+function loopSlide() {
+setInterval(changeImg, 8000);
+}
+</script>
 </body>
 </html>
