@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<link href="WebsiteCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="loopSlide()">
+<header class="HeadContent">
+  <h1>Jacob's Website</h1>
+  <p>A website designed by me.</p>
+</header>
+<nav>
+<div id="NavigationBar">
+<ul>
+<li class="TopNav">
+    <a class="CurrentPage">Info</a>
+  </li>
+
+<li class="TopNav">
+    <a href="file:///D:/Coding/PriceLanding.html" class="NavButton">Pricing </a>
+</li>
+  <li class="TopNav">
+    <a href="file:///D:/Coding/SocialLanding.html" class="NabButton">Social  <img class="arrows" src="../website-images/down-tr.png"> </a>
+    <div class="DropContent">
+      <a href="https://www.facebook.com/Bancroft-Designs-1102604599914235/?modal=admin_todo_tour" target="_blank">Facebook 
+    <img src="../website-images/fb.jpeg" height="17" width="17" align="right"> </img> </a>
+      <a href="https://twitter.com/BancroftDesigns" target="_blank">Twitter
+    <img src="../website-images/twitter.jpeg"  height="17" width="17" align="right"> </img> </a>
+      <a href="https://www.instagram.com/bancroftwebdesigns/" target="_blank">Instagram
+    <img src="../website-images/ig.jpeg" height="17=" width="17" align="right"> </img> </a>
+    </div>
+  </li>
+</div>
+</ul>
+</nav>
+<main>
+
+  <article class="BreakSpace">
+  <h1> Jacob Bancroft </h1>
+   <h3>Info about me:</h3>
+    <p>Born March 5th in 2002 as a single child.</p>
+    <p>Currently 16 studying Computer Science closely with intent of becoming a programmer in the near future.</p>
+    <br>
+    <h2>Interests / Hobbies</h2>
+   
+    <p>I help co-design automation bots that can be used for practical needs, such as listing information about someone based on what's available online.</p>
+
+    <p>In my free time, I study how websites and video games front end structure appears both functionally and aethestically. </p>
+    <h5> Other hobbies include: </h5>
+    <p> Playing video games </p>
+    <p> Data Analysis </p>
+    <p> Walking/Jogging </p>
+  </article>
+  <aside>
+    <h5>Photo reel of me:</h5>
+    <img id="slide" src="../website-images/ig.jpeg" style="height:200px; width:200px"> </img>
+    <p>Photo's were taken during formal dressing places.</p>
+  </aside>
+</main>
+
+<footer>
+  <p> Website designed exclusively by Bancroft Designs. &copy; </p>
+  <p> For inquires, email jacobancroft35@gmail.com. </p>
+</footer>
+<script>
+var slidechange = document.getElementById("slide");
+var i = 0;
+var SlideImgs = ["../website-images/slideshow-image0.jpg",
+         "../website-images/slideshow-image1.jpg", ];
+function changeImg() {
+slidechange.setAttribute("src", SlideImgs[i]);
+  i++;
+if(i >= SlideImgs.length) {
+  i = 0;
+}
+}
+
+
+function loopSlide() {
+setInterval(changeImg, 8000);
+}
+</script>
+</body>
+</html>
