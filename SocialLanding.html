@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<link href="WebsiteCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="loopSlide()">
+<header class="HeadContent">
+  <h1>Jacob's Website</h1>
+  <p>A website designed by me.</p>
+</header>
+<nav>
+<div id="NavigationBar">
+<ul>
+<li class="TopNav">
+    <a class="NavButton" href = "file:///D:/Coding/InfoLanding.html">Info</a>
+  </li>
+
+<li class="TopNav">
+    <a href="file:///D:/Coding/PriceLanding.html" class="NavButton">Pricing </a>
+</li>
+  <li class="TopNav">
+    <a href="#" class="CurrentPage">Social  <img class="arrows" src="../website-images/down-tr.png"> </a>
+    <div class="DropContent">
+      <a href="https://www.facebook.com/Bancroft-Designs-1102604599914235/?modal=admin_todo_tour" target="_blank">Facebook 
+    <img src="../website-images/fb.jpeg" target="_blank" height="17" width="17" align="right"> </img> </a>
+      <a href="https://twitter.com/BancroftDesigns" target="_blank">Twitter
+    <img src="../website-images/twitter.jpeg" target="_blank" height="17" width="17" align="right"> </img> </a>
+      <a href="https://www.instagram.com/bancroftwebdesigns/" target="_blank">Instagram
+    <img src="../website-images/ig.jpeg" height="17=" width="17" align="right"> </img> </a>
+    </div>
+  </li>
+</div>
+</ul>
+</nav>
+<main>
+  <article class="BreakSpace">
+    <h1> Personal social: </h1>
+    <p>If you want some mobility, I can help give social traction on Instagram, Facebook, and Twitter.</p>
+    <p>Below, is my current twitter feed. Look at it and see how much traction it has in social media.</p>
+    <p> (Note, my social media has no real traction, this is all rhetorical for the assignment) </p>
+    <br>
+    <a class="twitter-timeline" data-width="800" data-height="500" data-theme="dark" href="https://twitter.com/BancroftDesigns?ref_src=twsrc%5Etfw">Tweets by BancroftDesigns</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+     <p> Pricing for each platform varies: </p>
+<p> Instagram: 50$ </p>
+<p> Facebook: 65$ </p>
+<p> Twitter: 85$ </p>
+  </article>
+</main>
+<footer>
+  <p> Website designed exclusively by Bancroft Designs. &copy; </p>
+  <p> For inquires, email jacobancroft35@gmail.com. </p>
+</footer>
+<script>
+var slidechange = document.getElementById("slide");
+var i = 0;
+var SlideImgs = ["../website-images/slideshow-image0.jpg",
+         "../website-images/slideshow-image1.jpg", ];
+function changeImg() {
+slidechange.setAttribute("src", SlideImgs[i]);
+  i++;
+if(i >= SlideImgs.length) {
+  i = 0;
+}
+}
+
+
+function loopSlide() {
+setInterval(changeImg, 8000);
+}
+</script>
+</body>
+</html>

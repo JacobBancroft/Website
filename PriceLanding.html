@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<link href="WebsiteCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="loopSlide()">
+<header class="HeadContent">
+  <h1>Jacob's Website</h1>
+  <p>A website designed by me.</p>
+</header>
+<nav>
+<div id="NavigationBar">
+<ul>
+<li class="TopNav">
+    <a href = "file:///D:/Coding/InfoLanding.html" class="NavButton">Info</a>
+  </li>
+
+<li class="TopNav">
+    <a  class="CurrentPage">Pricing </a>
+  </li>
+  <li class="TopNav">
+    <a href="file:///D:/Coding/SocialLanding.html" class="NavButton">Social  <img class="arrows" src="../website-images/down-tr.png"> </a>
+    <div class="DropContent">
+      <a href="https://www.facebook.com/Bancroft-Designs-1102604599914235/?modal=admin_todo_tour" target="_blank">Facebook 
+    <img src="../website-images/fb.jpeg"  height="17" width="17" align="right"> </img> </a>
+      <a href="https://twitter.com/BancroftDesigns" target="_blank">Twitter
+    <img src="../website-images/twitter.jpeg" height="17" width="17" align="right"> </img> </a>
+      <a href="https://www.instagram.com/bancroftwebdesigns/" target="_blank">Instagram
+    <img src="../website-images/ig.jpeg" height="17=" width="17" align="right"> </img> </a>
+    </div>
+  </li>
+</div>
+</ul>
+</nav>
+<main>
+
+  <article>
+  <h1> Pricing for websites: </h1>
+    <p>Pricing for websites begin at a base rate of 50$, I do not do hourly services but rather job services. You pay half the price upfront, I design, you give feedback and stuff you want changed. Website is completed, you pay the rest and you get sales.</p>
+    <p>Depending on the difficulty of the job, prices can vary.</p>
+    <h4> General pricing: </h4>
+    <p> Watermark removal: 50$ </p>
+    <p> Addition of responsive website: 50$ per device: </p>
+    <p> Advanced login system: 40$ (can be more or less depdending on what needs to be stored) </p>
+    <h5> For other questions regarding pricing, email me at jacobancroft35@gmail.com OR message / call me at 603-325-2629</h5>
+    <hr> 
+  <h1> Pricing for banners: </h1>
+  <p> Ever wanted a good looking banner for your website or buisness, look no further! </p>
+  <p> Bancroft Designs charge a low and cheap price for banners. </p>
+  <h4> Banner pricing: </h4>
+  <p> Static Banners: 5$ </p>
+  <p> GIF banners / NonStatic banners: 15$ </p>
+  <p> Custom banner with logo embeded: +5$ </p>
+  <p> Removal of watermark 7$ </p>
+  </article>
+</main>
+
+<footer>
+  <p> Website designed exclusively by Bancroft Designs. &copy; </p>
+  <p> For inquires, email jacobancroft35@gmail.com. </p>
+</footer>
+<script>
+var slidechange = document.getElementById("slide");
+var i = 0;
+var SlideImgs = ["../website-images/web-img1.jpg",
+         "../website-images/web-img2.png", 
+         "../website-images/web-img3.jpg"];
+function changeImg() {
+slidechange.setAttribute("src", SlideImgs[i]);
+  i++;
+if(i >= SlideImgs.length) {
+  i = 0;
+}
+}
+
+
+function loopSlide() {
+setInterval(changeImg, 8000);
+}
+</script>
+</body>
+</html>
